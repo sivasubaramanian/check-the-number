@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1>Guess Correct Number</h1>
+        <input id="num">
+        <button onclick="check()">check</button>
+        <p id="result">Right/Wrong</p>
+        <p id="score">Score 10</p>
+
+        <script>
+            var a=document.getElementById("num")
+            var r=document.getElementById("result")
+            var s=document.getElementById("score")
+            var rand=Math.floor(Math.random()*10)
+            var score1=10
+
+            function check(){
+                var rand=Math.floor(Math.random()*10)+1
+                var val=Number(a.value)
+                if(rand==val){
+                    r.textContent="Right"
+                    s.textContent="Your score is: "+score1
+                }
+                else{
+                    score1--
+                    r.textContent="Wrong"
+                    s.textContent="Your score is: "+score1
+
+                }
+
+            }
+
+        </script>
+        
+    </body>
+</html>
